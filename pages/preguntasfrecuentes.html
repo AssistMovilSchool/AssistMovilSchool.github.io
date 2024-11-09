@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/preguntasfrecuentes.css" />
+</head>
+<body>
+<!---->
+<header>  
+    <div class="contenedor">
+        <img class="logoppal"src="../assets/logoppal.gif" alt="logoppal" loading="lazy">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!---->
+<div class="imagenprincipal">
+    <img src="../assets/imagend.jpg" alt="imagenprincipal" loading="lazy"/>
+</div>
+<!---->
+<div class="textoprincipal">
+    <p>Cuidando cada paso hacia el aprendizaje</p>
+</div>
+<!---->
+<div class="textosecundario">
+    <p>Preguntas frecuentes en el sistema AssistMovilSchool</p>
+</div>
+<!---->
+<section class="diferenciales"> 
+  <div> 
+    <ul> 
+      <li class="items" onclick="cambiarVideo('https://www.youtube.com/embed/EwkZGGE7Th0')"> 
+        <a href="javascript:void(0)">¿ Cómo puedo obtener el servicio ?</a> 
+      </li> 
+      <li class="items" onclick="cambiarVideo('https://www.youtube.com/embed/-Tca2XTrdso')"> 
+        <a href="javascript:void(0)">¿ Cómo realizar el registro de estudiante ?</a> 
+      </li> 
+      <li class="items" onclick="cambiarVideo('https://www.youtube.com/embed/g7iDXNqi5DI')"> 
+        <a href="javascript:void(0)">¿ Cómo realizar seguimiento a la ruta escolar ?</a> 
+      </li> 
+      <li class="items" onclick="cambiarVideo('https://www.youtube.com/embed/gAT9m8O3k0k')"> 
+        <a href="javascript:void(0)">¿ Cómo descargar un reporte ?</a> 
+      </li> 
+    </ul> 
+  </div> 
+</section> 
+<!----> 
+<section class="video-player"> 
+  <iframe id="videoReproductor" width="600" height="400" 
+  src="https://www.youtube.com/embed/EmkZGGE7Th0" 
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen> 
+</iframe>
+</section>
+<!---->
+<footer>
+    <img class="piedepagina"src="../assets/piedepagina.png" alt="piedepagina" loading="lazy"/>
+    <p class="copyright">&copy Copyright AssistMovileSchool 2024</p>
+</footer>
+<!---->
+<script>
+    function cambiarVideo(ruta) {
+      const video = document.getElementById('videoReproductor');
+      video.src = ruta;
+      video.load(); // Carga el nuevo video
+      video.play(); // Reproduce el video automáticamente
+    }
+</script>
+</body>
+</html>

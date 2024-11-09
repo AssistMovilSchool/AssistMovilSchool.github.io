@@ -1,0 +1,112 @@
+/* Estilos generales para resetear el navegador */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #00c3ff, #ffff1c);
+  }
+  
+  /* Contenedor del formulario */
+
+  .container {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+  }
+  
+  /* Estilos de los inputs */
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #aaa;
+  }
+  
+  /* Botón de Ingresar */
+
+  button.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Botón de Cancelar */
+
+  button.btn-cancel {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF4136;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button.btn-cancel:hover {
+    background-color: #C70039;
+  }
+  
+  /* Enlace de contraseña olvidada */
+  
+  .forgot-password {
+    margin-top: 10px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      width: 90%;
+    }
+  }

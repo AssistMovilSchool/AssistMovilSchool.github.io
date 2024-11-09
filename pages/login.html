@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INGRESO A REPORTES</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Reportes Login</h2>
+      <form onsubmit="return validarCredenciales()">
+        <input type="text" id="username" name="username" placeholder="Usuario" required />
+        <input type="password" id="password" name="password" placeholder="Contraseña" required />
+        
+        <!-- Botón de Ingresar -->
+        <button type="submit" class="btn-login">Ingresar</button>
+        
+        <!-- Botón de Cancelar -->
+        <button type="button" class="btn-cancel" onclick="cancelar()">Cancelar</button>
+        
+        <a href="#" class="forgot-password" onclick="mostrarMensajePrueba()">¿Olvidó Contraseña?</a>
+      </form>
+    </div>
+<!---->
+    <script>
+      // Función para validar el usuario y la contraseña
+      function validarCredenciales() {
+        const usuariosCorrectos = ["admin", "juliana", "nazly", "francisco", "esneider"];
+        const passwordsCorrectos = ["admin", "juliana", "nazly", "francisco", "esneider"];
+      
+        const usuarioIngresado = document.getElementById("username").value;
+        const passwordIngresado = document.getElementById("password").value;
+      
+        // Verifica si el usuario y contraseña ingresados coinciden con algún par válido
+        const usuarioIndex = usuariosCorrectos.indexOf(usuarioIngresado);
+        
+        // Si el usuario es válido, verifica si la contraseña correspondiente también lo es
+        if (usuarioIndex !== -1 && passwordsCorrectos[usuarioIndex] === passwordIngresado) {
+          window.open("https://docs.google.com/spreadsheets/d/14OUyGpy3HEhaeJeoJrYSSYYpouHFvkILUswN-RDs3Tc/edit?gid=277068550#gid=277068550","_blanck"); // Abrir en nueva ventana
+        } else {
+          alert("Usuario o contraseña incorrectos");
+        }
+      
+        return false; // Previene el envío del formulario
+      }
+      
+      
+            // Función para cancelar y redirigir a otro enlace
+            function cancelar() {
+              window.location.href = "../index.html"; // Cambia por la URL que desees
+            }
+
+            function mostrarMensajePrueba() {
+        alert("Por favor, comuniquese con soporte técnico AssitMovilSchool para restablecer la contraseña");
+      }
+
+          </script>
+  </body>
+</html>
